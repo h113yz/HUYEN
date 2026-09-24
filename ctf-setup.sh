@@ -42,7 +42,8 @@ pip install pycryptodome gmpy2 sympy z3-solver pwntools ecdsa
 # Forensics
 pip install volatility3 scapy pyshark
 # AI (bản CPU, nhẹ; đổi sang bản CUDA nếu VM có GPU)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install torch --index-url https://download.pytorch.org/whl/cpu \
+  || { echo "[!] Không tải được từ download.pytorch.org, dùng torch từ PyPI"; pip install torch; }
 pip install numpy pandas scikit-learn transformers jupyterlab pillow
 deactivate
 
