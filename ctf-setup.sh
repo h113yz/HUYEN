@@ -14,7 +14,7 @@ echo "[*] Công cụ nền tảng..."
 $APT install -y build-essential git curl wget unzip p7zip-full \
   python3 python3-pip python3-venv pipx tmux vim jq file xxd \
   gdb gdb-multiarch radare2 docker.io
-sudo usermod -aG docker "$USER"
+sudo usermod -aG docker "${USER:-$(id -un)}"
 
 echo "[*] Forensics..."
 $APT install -y \
