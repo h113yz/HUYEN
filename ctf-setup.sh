@@ -23,6 +23,7 @@ $APT install -y \
   sleuthkit autopsy foremost testdisk scalpel libimage-exiftool-perl \
   binwalk steghide pngcheck tshark wireshark ruby-full hashcat john
 sudo gem install zsteg
+command -v rbenv >/dev/null && rbenv rehash  # rbenv cần rehash để zsteg có trong PATH
 # stegseek (brute force steghide nhanh)
 { wget -q https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /tmp/stegseek.deb \
   && $APT install -y /tmp/stegseek.deb; } || echo "[!] Bỏ qua stegseek"
